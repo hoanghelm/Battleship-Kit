@@ -147,6 +147,22 @@ with BattleShipClient(port=11000) as c:
         )
 ```
 
+### A worked example to beat
+
+`smart_bot.py` is a second, fuller bot: it leads its shots, scores all 360 headings for
+the safest one, and steers out of corners before they close. Its comments are in
+Vietnamese.
+
+```bash
+python smart_bot.py --ship 1 --seconds 120
+```
+
+It averages about 2170 points a run against roughly 1370 for aiming straight at the
+nearest contact and backing away. Two of its flags exist so you can check that for
+yourself rather than take it on trust: `--dodge 0` turns the heading search off, and
+`--net 0` turns off spreading shots across a target's escape cone. Spreading them
+*lowers* its score against this opponent, which is why it is a flag and not the default.
+
 ### Methods
 
 | Call | Does |
