@@ -178,10 +178,9 @@ python PythonBot\me_bot.py
 This is the intended way to work: describe the behaviour you want, let an
 assistant write the Python.
 
-Point it at `PythonBot/` first. `CLAUDE.md` in there is a briefing covering the
-contract, the rules a bot has to stay inside, and the traps this code has
-already fallen into. Claude Code picks it up on its own; anything else, tell it
-to read `CLAUDE.md` before touching `strategy.py`.
+Point it at `PythonBot/` first and have it read `README.md` in there and the top
+of `strategy.py`, which lists everything the bot can see. Tell it the one rule
+that matters: edit `strategy.py` and leave `bot_api.py` and `me_bot.py` alone.
 
 Then describe behaviour, not code:
 

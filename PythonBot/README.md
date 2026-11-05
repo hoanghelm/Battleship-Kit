@@ -70,10 +70,10 @@ sea.last_shot.skill_fired # which skill actually went off
 You are not expected to write the Python. Describe the behaviour you want and
 let an assistant make the change — that is how the event is meant to run.
 
-**Point it at this folder first.** `CLAUDE.md` here is a briefing: which file to
-edit, the submission rules it must not break, and the four traps this code has already
-fallen into. Claude Code reads it automatically; for anything else, tell it to
-read `CLAUDE.md` before changing anything.
+**Point it at this folder first.** Have it read this file and the top of
+`strategy.py`, which lists everything the bot can see each turn. Tell it the one
+rule that matters: `strategy.py` is the file to edit, and `bot_api.py` and
+`me_bot.py` are off limits.
 
 **Describe behaviour, not code.** You know the game; the assistant knows Python.
 Say what the bot should *do* and why, and leave the implementation to it.
